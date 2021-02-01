@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(180, 52%, 96%);
+}
+.bg-container {
+  overflow: hidden;
+}
+.bg-img {
+  background-color: hsl(180, 29%, 50%);
+  object-fit: cover;
+}
+
+.filterBar,
+.item {
+  margin: 0 auto 20px auto;
+  padding: 30px;
+
+  background-color: white;
+  border-radius: 5px;
+  border-left: 5px solid #fff;
+}
+@media screen and (min-width: 1000px) {
+  .filterBar,
+  .item {
+    min-width: 900px;
+    max-width: 1040px;
+  }
+}
+
+/* ********  MOBILE  ***  DESIGN  ********* */
+@media screen and (max-width: 1000px) {
+  .item {
+    position: relative;
+  }
+  .item > img {
+    position: absolute;
+    left: 50px;
+    top: -50px;
+  }
+  .item {
+    display: grid;
+    grid-template-rows: repeat(3, 35px);
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    min-width: 360px;
+    max-width: 475px;
+
+    padding-top: 50px;
+    margin-bottom: 80px;
+  }
+  .filterBar {
+    max-width: 475px;
+  }
+  .item > div {
+    margin-top: 10px;
+  }
+  .tags {
+    padding-top: 10px;
+  }
+  .tags > .tag {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 375px) {
+  #mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 375px) {
+  #desktop {
+    display: none;
+  }
+  .bg-img {
+    object-fit: fill;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item,
+  .filterBar {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  hr {
+    display: none;
+  }
+
+  .item {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 100px 340px minmax(500px, 100%);
+    grid-auto-flow: column;
+  }
+
+  img {
+    grid-row: span 3;
+  }
+  .tags {
+    grid-row: 2;
+    text-align: right;
+  }
+}
+
+/*-------------------------------------*/
+
+.filterBar > div {
+  display: inline-block;
+  width: calc(100% - 100px);
+}
+
+/*-------------------------------------*/
+
+.tag {
+  cursor: default;
+  padding: 8px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  font-size: 13px;
+  font-weight: 700;
+}
+.tags > .tag:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: hsl(180, 31%, 95%);
+}
+
+/*--------------------------------------*/
+
+.filterBar > div > .tag {
+  padding: 0px 0 0px 8px;
+  margin-bottom: 10px;
+}
+.cross {
+  padding: 8px;
+  border-radius: 0 3px 3px 0;
+  background-color: hsl(180, 29%, 50%);
+  color: hsl(180, 31%, 95%);
+}
+.cross:hover {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.filterBar {
+  position: relative;
+  top: -40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+/* ---------------------------------- */
+
+.name {
+  color: hsl(180, 29%, 50%);
+  font-size: 13px;
+  font-weight: 700;
+}
+.new {
+  background-color: hsl(180, 14%, 20%);
+  color: hsl(180, 31%, 95%);
+  padding: 4px 8px 2px 8px;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+.featured {
+  background-color: hsl(180, 29%, 50%);
+  color: hsl(180, 31%, 95%);
+  padding: 4px 8px 2px 8px;
+  border-radius: 20px;
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+.second {
+  color: hsl(180, 14%, 20%);
+  font-weight: 900;
+}
+
+.third {
+  color: hsl(180, 8%, 52%);
+}
+
+/* ----------------------------------- */
+.attribution {
+  visibility: hidden;
+}
+
+span {
+  display: inline-block;
+}
+
+#clear {
+  float: right;
+}
+
+hr {
+  margin: 15px 0 50px 0;
+}
+
+.blueBorder {
+  border-color: hsl(180, 29%, 50%);
+}
